@@ -1,7 +1,11 @@
 Serialization = {};
 
 -- Import services
+--[[
+this is original line below!!
 Support = require(script.Parent.SupportLibrary);
+--]]
+Support = getgenv().Support
 Support.ImportServices();
 
 local Types = {
@@ -441,4 +445,5 @@ function Serialization.InflateBuildData(Data)
 end;
 
 -- Return the API
+
 return Serialization;
