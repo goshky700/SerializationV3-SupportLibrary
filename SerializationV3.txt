@@ -1,11 +1,7 @@
 Serialization = {};
 
 -- Import services
---[[
-this is original line below!!
-Support = require(script.Parent.SupportLibrary);
---]]
-Support = getgenv().Support
+Support = getgenv().Support or getgenv().SupportLibrary
 Support.ImportServices();
 
 local Types = {
@@ -447,3 +443,4 @@ end;
 -- Return the API
 
 return Serialization;
+
